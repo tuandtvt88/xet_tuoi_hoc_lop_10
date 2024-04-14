@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1>Xét tuổi học lớp 10</h1>
+<body>
+<input type="number" id="tuoi" placeholder="Nhập tuổi của học sinh">
+<button onclick="xettuoi()">Kết quả</button>
+<p id="kq"></p>
+</body>
+<script>
+    function xettuoi(){
+        let nhaptuoi = document.getElementById('tuoi').value;
+        if (nhaptuoi>=14 && nhaptuoi <=16){
+            document.getElementById('kq').innerHTML = 'Đủ tuổi học lớp 10'
+        }
+        else if (nhaptuoi<14 || nhaptuoi >16) {
+            document.getElementById('kq').innerHTML = 'Độ tuổi không đủ điều kiện học lớp 10'
+        }
+        else if (nhaptuoi<0){ //changed from nhaptuoi<-1 to nhaptuoi<0
+            document.getElementById('kq').innerHTML = 'Bạn nhập sai tuổi'
+        }
+    }
+</script>
+</html>
